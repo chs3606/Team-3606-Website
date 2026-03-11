@@ -153,11 +153,12 @@ background-color: rgb(255, 159, 124);
   z-index: 1;
 }
 .seasonmain {
-position: absolute;
 z-index: 2;
 left: 50%;
 right: 50%;
 text-align: center;
+position: absolute;
+justify-self: center;
 margin: 0;
 padding-top: 100px;
 white-space: nowrap;
