@@ -165,6 +165,10 @@ font-size: 50px;
 color: rgb(255, 68, 0);
 border: black;
 }
+.description {
+  font-size: 30px;
+  text-align: center;
+}
 
 .footer {
   top: 0;

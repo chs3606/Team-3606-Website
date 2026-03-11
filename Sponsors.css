@@ -138,27 +138,48 @@ color: rgb(0, 0, 0);
 background-color: rgb(255, 159, 124);
 }
 .content {
-  margin-top: 135px;
+  margin-top: 175px;
   margin-left: 10%;
   margin-right: 10%;
 }
-.intro {
+
+.pagetitle {
+  font-size: 70px;
   text-align: center;
-  font-size: 50px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
-.mainpic {
-  width: 100%;
-  position: relative;
-  z-index: 1;
+.description {
+  text-align: center;
+  font-size: 35px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
-.seasonmain {
-text-align: center;
-position: absolute;
-z-index: 2;
-left: 50%;
-font-size: 50px;
-color: white;
-border: black;
+.intraloxsponsor {
+  text-align: center;
+  font-size: 25px;
+  margin: 0px;
+}
+.intraloxsponsorpic {
+  height: 250px;
+}
+.intpicdiv {
+justify-self: center;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.chsspon {
+  height: 250px;
+}
+.chsspondiv {
+justify-self: center;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.catholic {
+  text-align: center;
+  font-size: 25px;
+  margin: 0px;
 }
 
 .footer {
