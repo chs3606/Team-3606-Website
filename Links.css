@@ -142,23 +142,56 @@ background-color: rgb(255, 159, 124);
   margin-left: 10%;
   margin-right: 10%;
 }
-.intro {
+.pagetitle {
+  font-size: 70px;
   text-align: center;
-  font-size: 50px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
-.mainpic {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-.seasonmain {
+.firstlink {
+font-size: 40px;
 text-align: center;
-position: absolute;
-z-index: 2;
-left: 50%;
-font-size: 50px;
-color: white;
-border: black;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+color: black;
+margin-bottom: 50px;
+}
+.chslink {
+font-size: 40px;
+text-align: center;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+color: black;
+margin-bottom: 50px;
+}
+.intralink {
+font-size: 40px;
+text-align: center;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+color: black;
+margin-bottom: 50px;
+}
+.javalink {
+font-size: 40px;
+text-align: center;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+color: black;
+margin-bottom: 50px;
+}
+.websitecode {
+font-size: 40px;
+text-align: center;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+color: black;
+margin-bottom: 75px;
 }
 
 .footer {
