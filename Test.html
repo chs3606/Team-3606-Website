@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid of Buttons</title>
+<style>
+  /* Container as a grid */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between buttons */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  /* Style for <a> elements as buttons */
+  .button-grid a {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+  }
+
+  /* Hover effect */
+  .button-grid a:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="button-grid">
+  <a href="#">Button 1</a>
+  <a href="#">Button 2</a>
+  <a href="#">Button 3</a>
+  <a href="#">Button 4</a>
+  <a href="#">Button 5</a>
+  <a href="#">Button 6</a>
+</div>
+
+</body>
+</html>

@@ -149,38 +149,25 @@ background-color: rgb(255, 159, 124);
   margin: 0px;
   margin-bottom: 50px;
 }
-.yearscont {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 22%;
-    max-width: 100%;
-    padding: 10px;
-    justify-self: center;
-    margin-right: 10%;
-    align-self: center;
-}
-.year {
-  font-size: 25px;
-  display: inline-block;
+
+.description {
+  font-size: 40px;
   text-align: center;
-  color: rgb(0, 0, 0);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 150px;
-  padding-right: 200px;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 6px;
-  cursor: pointer;
-  background-color: rgb(255, 95, 37);
-  text-decoration: none;
-  margin: none;
 }
-.year:hover {
-  background-color: rgb(255, 135, 91);
+.record {
+  justify-content: center;
+  width: 100%;
 }
-
-
-
+.record2 {
+    justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+.bluelink {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
 
 
 
@@ -191,8 +178,9 @@ background-color: rgb(255, 159, 124);
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 600px;
+  margin-top: 50px;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background: rgb(255, 95, 37);

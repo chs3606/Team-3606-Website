@@ -167,7 +167,9 @@ background-color: rgb(255, 159, 124);
   text-align: center;
   margin-bottom: 50px;
 }
-
+.temporary {
+  font-size: 100px;
+}
 
 
 

@@ -137,29 +137,39 @@ border: 2px solid rgb(0, 0, 0);
 color: rgb(0, 0, 0);
 background-color: rgb(255, 159, 124);
 }
+
 .content {
   margin-top: 135px;
   margin-left: 10%;
   margin-right: 10%;
 }
-.intro {
+.pagetitle {
+  font-size: 70px;
   text-align: center;
-  font-size: 50px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
-.mainpic {
-  width: 100%;
-  position: relative;
-  z-index: 1;
+
+.imgcontainer {
+  gap: 12px;
+  padding: 20px;
 }
-.seasonmain {
-text-align: center;
-position: absolute;
-z-index: 2;
-left: 50%;
-font-size: 50px;
-color: white;
-border: black;
+
+.galleryimg {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
 }
+.gallerydes {
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
 
 .footer {
   top: 0;
