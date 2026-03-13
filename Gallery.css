@@ -56,10 +56,10 @@ font-size: 30px;
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .home:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 .sponsors {
@@ -71,10 +71,10 @@ background-color: rgb(255, 159, 124);
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .sponsors:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 .thisyear {
@@ -86,10 +86,10 @@ background-color: rgb(255, 159, 124);
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .thisyear:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 .pastyears {
@@ -101,10 +101,10 @@ background-color: rgb(255, 159, 124);
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .pastyears:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 .gallery {
@@ -116,10 +116,10 @@ background-color: rgb(255, 159, 124);
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .gallery:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 .links {
@@ -131,10 +131,10 @@ background-color: rgb(255, 159, 124);
   background-color: rgb(255, 135, 91);
   margin-right: 20px;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .links:hover {
-border: 2px solid rgb(0, 0, 0);
-color: rgb(0, 0, 0);
+
 background-color: rgb(255, 159, 124);
 }
 
