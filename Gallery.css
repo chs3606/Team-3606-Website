@@ -155,7 +155,6 @@ background-color: rgb(255, 159, 124);
         gap: 15px;
     }
 
-    /* Image styling */
     .image-grid img {
         width: 100%;
         height: auto;
@@ -171,10 +170,7 @@ background-color: rgb(255, 159, 124);
 
 
 .footer {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
