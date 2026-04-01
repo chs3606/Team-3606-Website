@@ -1,7 +1,2 @@
-clean code
-make header and footer look good when sized down
-Make links in links tab not take up full space
-change orange to black / white with orange accents
 contact page
 support page
-Make comments everywhere

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Past Years Team 3606</title>
+  <title>2015</title>
+  <!-- Title changes what shows up in the tab section -->
   <link rel="stylesheet" href="Years.css">
+  <!-- All past year pages share the same Years.css stylesheet -->
 </head>
 <body>
 
+  <!-- Standard topbar and nav menu — see Home.html for detailed comments -->
   <nav class="topbar">
     <div class="logo">
    <img src=
@@ -54,37 +57,60 @@
 </div>
 </div>
   </nav>
-   <div class="content">
+
+  <!-- ==================== PAGE-SPECIFIC CONTENT ==================== -->
+  <div class="content">
+
+    <!-- .pagetitle is the large year heading at the top of the page -->
     <p class="pagetitle">
       2015
       </p>
+
+    <!-- .record is the win/loss record image for this season -->
+    <!-- src points to the record graphic inside the 2015 folder -->
     <img src=
     "Gallery/2015/2015Record.png" 
     class="record">
-      <p class="description">
+
+    <!-- .description is the short summary of this season's performance -->
+    <p class="description">
                 2015 was Bear Metal's 5th year where they got 53.56 qual score getting 19th in the Bayou Regional.
       </p>
 
-<a class="bluelink" href="https://www.thebluealliance.com/team/3606/2015">Click Here for 3606's Blue Aliance page</a>
+    <!-- .bluelink links to the team's Blue Alliance page for this specific year -->
+    <a class="bluelink" href="https://www.thebluealliance.com/team/3606/2015">Click Here for 3606's Blue Aliance page</a>
+
+  </div>
+  <!-- End .content -->
 
 
-
-
-
-
+  <!-- Standard footer — see Home.html for detailed comments -->
   <div class="footer">
 
-  <a href="https://www.firstinspires.org/" target="_blank">
-       <img src=
-    "https://www.firstinspires.org/hubfs/web/design/first-web/Branding/Primaries/Logo%20Primary.svg" 
-    class="first">
-  </a>
-  <a href="https://www.catholichigh.org/" target="_blank">
-       <img src=
-    "https://resources.finalsite.net/images/f_auto,q_auto/v1619052860/catholichighorg/em3tj336tlakrdu2pzqj/chs-compositelogo.png" 
-    class="chs">
-  </a>
+<div class="topbit">
+<a href="https://www.firstinspires.org/" target="_blank">
+  <img src="Gallery/Other/FirstLogo.png" alt="FIRST" class="footerlink">
+</a>
+<a href="https://www.thebluealliance.com/team/3606" target="_blank">
+  <img src="Gallery/Other/BlueAlianceLogo.png" alt="Blue Alliance" class="footerlink">
+</a>
+<a href="https://www.catholichigh.org/" target="_blank">
+  <img src="Gallery/Other/CatholicLogo.jpg" alt="CHS" class="footerlink">
+</a>
+<a href="https://github.com/chs3606/FRC2026-FORKED" target="_blank">
+  <img src="Gallery/Other/GithubLogo.png" alt="Code" class="footerlink">
+</a>
+<a href="https://github.com/WrigZZ/Team-3606-Website" target="_blank">
+  <img src="Gallery/Other/GithubLogo.png" alt="Web Code" class="footerlink">
+</a>
+</div>
+<div class="bottombit"> 
+  <a href="Contact.html" class="link">Contact Us</a>
+  <a href="Support.html" class="link">Support Us</a>
+</div>
   </div>
+
+  <!-- Menu.js handles the hamburger menu and Past Years submenu logic -->
   <script src="Menu.js"></script>
 
 </body>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Past Years Team 3606</title>
+  <title>2011</title>
+  <!-- Title changes what shows up in the tab section -->
   <link rel="stylesheet" href="Years.css">
+  <!-- All past year pages share the same Years.css stylesheet -->
 </head>
 <body>
 
+  <!-- Standard topbar and nav menu — see Home.html for detailed comments -->
+  <!-- Note: no "active" class on any .droplink since this page is inside the .subdropdown, not a top-level nav link -->
   <nav class="topbar">
     <div class="logo">
    <img src=
@@ -55,31 +59,33 @@
 </div>
   </nav>
   
- <div class="content">
+  <!-- ==================== PAGE-SPECIFIC CONTENT ==================== -->
+  <div class="content">
+
+    <!-- .pagetitle is the large year heading at the top of the page -->
     <p class="pagetitle">
       2011
       </p>
+
+    <!-- .record is the win/loss record image for this season -->
+    <!-- src points to the record graphic inside the 2011 folder -->
     <img src=
     "Gallery/2011/2011Record.png" 
     class="record">
-      <p class="description">
+
+    <!-- .description is the short summary of this season's performance and awards -->
+    <p class="description">
         2011 was Team 3006's rookie year with a record of 4-9-0 Bear Metal got 24th in the Bayou Regional and the rookie inspiration award.
       </p>
 
-<a class="bluelink" href="https://www.thebluealliance.com/team/3606/2011">Click Here for 3606's Blue Aliance page</a>
+    <!-- .bluelink links to the team's Blue Alliance page for this specific year -->
+    <a class="bluelink" href="https://www.thebluealliance.com/team/3606/2011">Click Here for 3606's Blue Aliance page</a>
+
+  </div>
+  <!-- End .content -->
 
 
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Standard footer — see Home.html for detailed comments -->
   <div class="footer">
 
 <div class="topbit">
@@ -104,6 +110,8 @@
   <a href="Support.html" class="link">Support Us</a>
 </div>
   </div>
+
+  <!-- Menu.js handles the hamburger menu and Past Years submenu logic -->
   <script src="Menu.js"></script>
 
 </body>

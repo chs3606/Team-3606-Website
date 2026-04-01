@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(250, 250, 250);
 }
 
 .topbar {
@@ -17,8 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 95, 37);
-  padding: 20px;
+  background: rgb(36, 36, 36);
+    padding: 20px;
   height: 80px;
   z-index: 100;
 }
@@ -40,6 +41,8 @@ margin-left: auto;
 
 .title {
 font-size: 30px;
+  color: white;
+
 }
 
 .menudiv {
@@ -63,7 +66,7 @@ font-size: 30px;
   display: block;
   width: 100%;
   height: 4px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
@@ -207,7 +210,7 @@ font-size: 30px;
   margin-top: 200px;
   align-content: center;
   justify-items: center;
-  background: rgb(255, 95, 37);
+  background: rgb(36, 36, 36);
   padding: 20px;
   height: 200px;
 }
@@ -234,7 +237,7 @@ margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   font-size: 25px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .active {
