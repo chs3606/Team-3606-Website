@@ -1,2 +1,1 @@
-contact page
-support page
+Put comments on gallery.js

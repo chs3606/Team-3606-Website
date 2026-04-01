@@ -1,7 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-  font-family: "Outfit";
+  font-family: "Montserrat";
 }
 body {
   margin: 0;
@@ -40,7 +40,8 @@ margin-left: auto;
 }
 
 .title {
-font-size: 30px;
+  font-size: 40px;
+  font-weight: 500;
   color: white;
 }
 
@@ -274,6 +275,7 @@ font-size: 30px;
   justify-items: center;
   background: rgb(36, 36, 36);
   padding: 20px;
+  margin-top: 50px;
   height: 200px;
 }
 

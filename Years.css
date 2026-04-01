@@ -1,9 +1,9 @@
-/* Import the Outfit font from Google Fonts, supporting weights 100 through 900 */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* Import the Montserrat font from Google Fonts, supporting weights 100 through 900 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Apply the Outfit font to every element on the page */
+/* Apply the Montserrat font to every element on the page */
 * {
-  font-family: "Outfit";
+  font-family: "Montserrat";
 }
 
 /* Remove default browser margin and padding from the body */
@@ -56,7 +56,8 @@ body {
 
 /* Team name text size */
 .title {
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 500;
   color: white;
 }
 
