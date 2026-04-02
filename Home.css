@@ -114,7 +114,6 @@ body {
 /* position: absolute places it below the hamburger button */
 /* z-index: 200 keeps it above .topbar content */
 .dropdown {
-  display: none;
   position: absolute;
   top: calc(100% + 24px);
   right: 0;
@@ -124,6 +123,12 @@ body {
   flex-direction: column;
   z-index: 200;
   border-radius: 5px;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 /* Rounds the bottom corners of the last .droplink so it matches the rounded .dropdown border */
@@ -136,9 +141,10 @@ body {
 /* When Menu.js adds "open" to .dropdown, it switches from display:none to display:flex */
 /* display: flex is used instead of block so flex-direction: column works on the links */
 .dropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
-
 /* .droplink is the style for each navigation link row inside .dropdown */
 /* position: relative is needed so .subdropdown can be positioned relative to .pastyearsmenu */
 .droplink {
@@ -194,7 +200,6 @@ body {
 /* max-height + overflow-y: auto makes it scrollable when there are many years */
 /* z-index: 300 keeps it above .dropdown */
 .subdropdown {
-  display: none;
   flex-direction: column;
   position: absolute;
   right: 100%;
@@ -206,6 +211,11 @@ body {
   max-height: 264px;
   overflow-y: auto;
   z-index: 300;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 /* Custom scrollbar styling for .subdropdown in Chrome/Safari/Edge (webkit browsers) */
@@ -235,7 +245,8 @@ body {
 
 /* When Menu.js adds "open" to .subdropdown, it switches from display:none to display:flex */
 .subdropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* .sublink is the style for each individual year link inside .subdropdown */
@@ -348,6 +359,9 @@ body {
   margin-right: 20px;
   font-size: 25px;
   color: rgb(255, 255, 255);
+}
+.copyright {
+  color:white;
 }
 
 /* .active highlights the current page link in the .dropdown menu */

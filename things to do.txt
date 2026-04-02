@@ -1,11 +1,14 @@
-Done all, awaiting new instructions
-Add the google thing so it shows up on google
-Add the other thing so it looks good when shared
-add alt text on all pictures
-add 404 page
-Copyright line to footer
-add smooth scroll behavior
-Style Blue alliance link on years
-compress pictures in gallery
 make the logos in footer different
 Current news section
+
+
+
+remember to do the sitemap stuff when it goes live
+Change the share url stuff when it goes live:
+
+<!-- Open Graph tags — controls how the page looks when shared on Discord, social media, etc. -->
+<meta property="og:title" content="Bear Metal Team 3606">
+<meta property="og:description" content="FIRST Robotics Team 3606 based at Catholic High School in Baton Rouge, Louisiana.">
+<meta property="og:image" content="https://yoursite.com/Gallery/2026/2026Team2.jpeg">
+<meta property="og:url" content="https://yoursite.com/Home.html">
+<meta property="og:type" content="website">

@@ -15,20 +15,18 @@ const counter = document.getElementById('slide-counter');
 // To add a new photo: add a new { title: "...", src: "..." } entry to this array
 // To remove a photo: delete its entry from this array
 const slides = [
-  { title: "Working on the Robot at 2026 Competition 1", src: "Gallery/2026/2026WorkComp1.jpeg" },
-  { title: "Working on the Robot at 2026 Competition 2", src: "Gallery/2026/2026WorkComp2.jpeg" },
-  { title: "Working on the Robot at 2026 Competition 3", src: "Gallery/2026/2026WorkComp3.jpeg" },
-  { title: "Working on the Robot at 2026 Competition 4", src: "Gallery/2026/2026WorkComp4.jpeg" },
-  { title: "Working on the Robot at 2026 Competition 5", src: "Gallery/2026/2026WorkComp5.jpeg" },
-  { title: "Working on the 2026 Robot", src: "Gallery/2026/2026WorkHome.jpeg" },
-  { title: "2026 FRC Team 1", src: "Gallery/2026/2026Team1.jpeg" },
-  { title: "2026 FRC Team 2", src: "Gallery/2026/2026Team2.jpeg" },
-  { title: "2026 Rebuilt Match", src: "Gallery/2026/2026Play.jpeg" },
-  { title: "2026 Chassis", src: "Gallery/2026/2026Chassis.jpg" },
-  { title: "2026 Bumpers", src: "Gallery/2026/2026Bumpers.jpeg" },
-  { title: "2026 Bot 1", src: "Gallery/2026/2026Bot1.jpeg" },
-  { title: "2026 Bot 2", src: "Gallery/2026/2026Bot2.jpeg" },
-  { title: "2026 Bot 3", src: "Gallery/2026/2026Bot3.jpeg" },
+  { title: "Working on the Robot at 2026 Competition 1", src: "Gallery/2026/2026WorkComp1.jpg" },
+  { title: "Working on the Robot at 2026 Competition 2", src: "Gallery/2026/2026WorkComp2.jpg" },
+  { title: "Working on the Robot at 2026 Competition 3", src: "Gallery/2026/2026WorkComp3.jpg" },
+  { title: "Working on the Robot at 2026 Competition 4", src: "Gallery/2026/2026WorkComp4.jpg" },
+  { title: "Working on the Robot at 2026 Competition 5", src: "Gallery/2026/2026WorkComp5.jpg" },
+  { title: "Working on the 2026 Robot", src: "Gallery/2026/2026WorkHome.jpg" },
+  { title: "2026 FRC Team 1", src: "Gallery/2026/2026Team1.jpg" },
+  { title: "2026 FRC Team 2", src: "Gallery/2026/2026Team2.jpg" },
+  { title: "2026 Rebuilt Match", src: "Gallery/2026/2026Play.jpg" },
+  { title: "2026 Bumpers", src: "Gallery/2026/2026Bumpers.jpg" },
+  { title: "2026 Bot 1", src: "Gallery/2026/2026Bot1.jpg" },
+  { title: "2026 Bot 2", src: "Gallery/2026/2026Bot2.jpg" },
 ];
 
 // cur tracks the index of the currently displayed slide (starts at 0 = first slide)

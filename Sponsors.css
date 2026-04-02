@@ -112,7 +112,6 @@ body {
 /* display: none hides it by default — Menu.js adds "open" to show it */
 /* z-index: 200 keeps it above .topbar content */
 .dropdown {
-  display: none;
   position: absolute;
   top: calc(100% + 24px);
   right: 0;
@@ -122,6 +121,12 @@ body {
   flex-direction: column;
   z-index: 200;
   border-radius: 5px;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 /* Rounds the bottom corners of the last .droplink to match the rounded .dropdown border */
@@ -133,7 +138,9 @@ body {
 
 /* When Menu.js adds "open" to .dropdown, it switches from display:none to display:flex */
 .dropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 /* .droplink is the style for each navigation link row inside .dropdown */
@@ -191,7 +198,6 @@ body {
 /* max-height + overflow-y: auto makes it scrollable when there are many years */
 /* z-index: 300 keeps it above .dropdown */
 .subdropdown {
-  display: none;
   flex-direction: column;
   position: absolute;
   right: 100%;
@@ -203,6 +209,11 @@ body {
   max-height: 264px;
   overflow-y: auto;
   z-index: 300;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 /* Custom scrollbar styling for .subdropdown in webkit browsers (Chrome/Safari/Edge) */
@@ -232,7 +243,8 @@ body {
 
 /* When Menu.js adds "open" to .subdropdown, it switches from display:none to display:flex */
 .subdropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* .sublink is the style for each individual year link inside .subdropdown */
@@ -341,6 +353,10 @@ body {
   font-size: 25px;
   color: rgb(255, 255, 255);
 }
+.copyright {
+  color:white;
+}
+
 
 /* .active highlights the current page's link in the .dropdown */
 /* pointer-events: none disables clicking since you're already on that page */

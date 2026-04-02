@@ -1,14 +1,20 @@
-
+/* Imports the "Montserrat" font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Sets "Montserrat" as the default font for every element on the page */
 * {
   font-family: "Montserrat";
 }
+
+/* Removes default browser spacing and sets the background to near-white */
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(250, 250, 250);
 }
 
+/* .topbar is the navigation bar pinned to the top of the screen */
+/* Standard across all pages — see Home.css for detailed comments */
 .topbar {
   position: fixed;
   top: 0;
@@ -24,32 +30,39 @@ body {
   z-index: 100;
 }
 
+/* .logo holds the team logo image on the left side of the topbar */
 .logo {
   display: flex;
   margin-left: 100px;
 }
+
+/* .screenshot is the team logo image inside .logo */
 .screenshot {
   height: 120px;
   display: block;
   background-color: black;
 }
 
+/* .midtext is the container for the team name centered in the topbar */
 .midtext {
-margin-right: auto;
-margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+/* .title is the "Bear Metal Team 3606" text inside .midtext */
 .title {
   font-size: 40px;
   font-weight: 500;
   color: white;
 }
 
+/* .menudiv wraps the hamburger button and .dropdown on the right side of the topbar */
 .menudiv {
   position: relative;
   margin-right: 40px;
 }
 
+/* .menu is the hamburger button */
 .menu {
   display: flex;
   flex-direction: column;
@@ -62,6 +75,7 @@ margin-left: auto;
   padding: 0;
 }
 
+/* Each span is one of the three horizontal bars of the hamburger icon */
 .menu span {
   display: block;
   width: 100%;
@@ -71,6 +85,7 @@ margin-left: auto;
   transition: all 0.3s ease;
 }
 
+/* When Menu.js adds "open" to .menu, the bars animate into an X shape */
 .menu.open span:nth-child(1) {
   transform: translateY(11px) rotate(45deg);
 }
@@ -81,8 +96,9 @@ margin-left: auto;
   transform: translateY(-11px) rotate(-45deg);
 }
 
+/* .dropdown is the nav menu shown when the hamburger is clicked */
+/* Standard across all pages — see Home.css for detailed comments */
 .dropdown {
-  display: none;
   position: absolute;
   top: calc(100% + 24px);
   right: 0;
@@ -92,19 +108,28 @@ margin-left: auto;
   flex-direction: column;
   z-index: 200;
   border-radius: 5px;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-
-
+/* Rounds the bottom corners of the last .droplink */
 .droplink:last-child {
   border-radius: 0 0 8px 8px;
   border-bottom: none;
 }
 
+/* Shows the dropdown when Menu.js adds the "open" class */
 .dropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
+/* .droplink is the style for each nav link row inside .dropdown */
 .droplink {
   color: black;
   text-decoration: none;
@@ -117,17 +142,19 @@ margin-left: auto;
   position: relative;
 }
 
-
+/* Lightens the background of a .droplink when hovered */
 .droplink:hover {
   background-color: rgb(255, 159, 124);
 }
 
+/* .droplink.active highlights the current page's link */
 .droplink.active {
   background-color: rgb(200, 60, 10);
   cursor: default;
   pointer-events: none;
 }
 
+/* .pastyearsmenu is the "Past Years" row that contains .subdropdown */
 .pastyearsmenu {
   display: flex;
   align-items: center;
@@ -136,16 +163,18 @@ margin-left: auto;
   position: relative;
 }
 
+/* .arrow is the ▸ triangle icon that rotates when the submenu opens */
 .arrow {
   transition: transform 0.2s ease;
 }
 
+/* Rotates .arrow 90 degrees when .pastyearsmenu is open */
 .pastyearsmenu.open .arrow {
   transform: rotate(90deg);
 }
 
+/* .subdropdown is the nested year list — see Home.css for detailed comments */
 .subdropdown {
-  display: none;
   flex-direction: column;
   position: absolute;
   right: 100%;
@@ -157,30 +186,37 @@ margin-left: auto;
   max-height: 264px;
   overflow-y: auto;
   z-index: 300;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
+
+/* Custom scrollbar styling for .subdropdown — see Home.css for detailed comments */
 .subdropdown::-webkit-scrollbar {
   width: 6px;
 }
-
 .subdropdown::-webkit-scrollbar-track {
   background: rgb(255, 95, 37);
   border-radius: 10px;
   margin: 3px;
 }
-
 .subdropdown::-webkit-scrollbar-thumb {
   background: rgb(200, 60, 10);
   border-radius: 10px;
 }
-
 .subdropdown::-webkit-scrollbar-thumb:hover {
   background: black;
 }
 
+/* Shows the subdropdown when Menu.js adds the "open" class */
 .subdropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* .sublink is the style for each individual year link inside .subdropdown */
 .sublink {
   color: black;
   text-decoration: none;
@@ -190,10 +226,19 @@ margin-left: auto;
   transition: background-color 0.2s ease;
 }
 
+/* Lightens the background of a .sublink when hovered */
 .sublink:hover {
   background-color: rgb(255, 159, 124);
 }
 
+/* =====================
+   GALLERY PAGE CONTENT
+   ===================== */
+
+/* .content is the main body area below the topbar */
+/* Note: margin-top is 135px here (smaller than other pages) since the gallery
+   doesn't need as much space before the slideshow starts */
+/* display: flex + align-items: center stacks and centers the slideshow vertically */
 .content {
   margin-top: 135px;
   margin-left: 10%;
@@ -203,6 +248,7 @@ margin-left: auto;
   align-items: center;
 }
 
+/* .pagetitle is the large "Gallery" heading at the top of the page */
 .pagetitle {
   font-size: 70px;
   text-align: center;
@@ -210,7 +256,13 @@ margin-left: auto;
   margin-bottom: 50px;
 }
 
+/* =====================
+   SLIDESHOW
+   ===================== */
 
+/* .slideshow is the container for the entire slideshow widget */
+/* position: relative allows .slidecontrols and .slidecounter to be
+   absolutely positioned relative to the slideshow area */
 .slideshow {
   display: flex;
   flex-direction: column;
@@ -219,16 +271,23 @@ margin-left: auto;
   position: relative;
 }
 
+/* .slidepic is the current slide photo */
+/* max-height caps the image height so very tall photos don't dominate the page */
+/* border-radius softly rounds the corners */
 .slidepic {
   max-height: 650px;
   border-radius: 20px;
 }
 
+/* .slidetitle is the caption text displayed above the current slide photo */
 .slidetitle {
   justify-self: center;
   font-size: 23px;
 }
 
+/* .slidecontrols is the wrapper for the prev and next buttons */
+/* position: absolute + top: 50% + transform centers it vertically over the photo */
+/* width: 80% and justify-content: space-between pushes the buttons to opposite sides */
 .slidecontrols {
   position: absolute;
   top: 50%;
@@ -240,6 +299,9 @@ margin-left: auto;
   box-sizing: border-box;
 }
 
+/* .prevbut and .nextbut are the left and right arrow navigation buttons */
+/* Semi-transparent orange background blends with the photo while still being visible */
+/* transition smoothly darkens the button on hover */
 .prevbut, .nextbut {
   font-size: 40px;
   width: 120px;
@@ -251,10 +313,15 @@ margin-left: auto;
   transition: background-color 0.2s ease;
 }
 
+/* Darkens the button background when hovered */
 .prevbut:hover, .nextbut:hover {
   background-color: rgba(255, 135, 91, 0.85);
 }
 
+/* .slidecounter displays the "1 / 14" progress indicator */
+/* position: absolute + top: 90% places it near the bottom of the photo */
+/* left: 50% + transform: translateX(-50%) centers it horizontally */
+/* Semi-transparent dark pill background keeps it readable over any photo */
 .slidecounter {
   position: absolute;
   top: 90%;
@@ -267,8 +334,13 @@ margin-left: auto;
   font-size: 22px;
 }
 
+/* =====================
+   FOOTER
+   ===================== */
 
-
+/* .footer is the dark bar at the bottom of the page */
+/* margin-top adds space between the slideshow and the footer */
+/* Standard across all pages — see Home.css for detailed comments */
 .footer {
   display: block;
   align-content: center;
@@ -279,30 +351,45 @@ margin-left: auto;
   height: 200px;
 }
 
+/* .topbit holds the row of external organization logo links */
 .topbit {
-flex: 1;
-margin-left: 20px;
-margin-right: 20px;
-display: flex;
-justify-content: center;
-align-content: center;
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
+/* .footerlink is each logo image inside .topbit */
 .footerlink {
   height: 80px;
   border-radius: 40px;
   margin-left: 15px;
   margin-right: 15px;
 }
+
+/* .bottombit holds the Contact Us and Support Us text links */
 .bottombit {
-display: block;
-margin-top: 20px;
+  display: block;
+  margin-top: 20px;
 }
+
+/* .link is each text link inside .bottombit */
 .link {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 25px;
   color: rgb(255, 255, 255);
 }
+
+/* .copyright is the copyright line at the bottom of the footer */
+.copyright {
+  color: white;
+}
+
+/* .active highlights the current page's link in the .dropdown */
+/* pointer-events: none disables clicking since you're already on that page */
 .active {
   background-color: rgb(200, 60, 10);
   cursor: default;

@@ -118,16 +118,21 @@ body {
 /* The main dropdown menu: hidden by default, positioned below the hamburger button.
    Becomes visible when the open class is added via Menu.js */
 .dropdown {
-  display: none;
   position: absolute;
-  top: calc(100% + 24px); /* Positions it just below the hamburger button */
+  top: calc(100% + 24px);
   right: 0;
   background-color: rgb(255, 95, 37);
   border: 2px solid black;
   min-width: 180px;
   flex-direction: column;
-  z-index: 200; /* Sits above the topbar */
+  z-index: 200;
   border-radius: 5px;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 /* Rounds the bottom corners of the last droplink to match the dropdown's border-radius */
@@ -138,7 +143,9 @@ body {
 
 /* Makes the dropdown visible when the open class is toggled on by Menu.js */
 .dropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 /* Individual link items inside the dropdown */
@@ -192,18 +199,22 @@ body {
 /* The subdropdown that appears to the left of the "Past Years" item.
    Hidden by default; scrollable since there are many year links */
 .subdropdown {
-  display: none;
   flex-direction: column;
   position: absolute;
-  right: 100%; /* Appears to the left of the pastyearsmenu item */
+  right: 100%;
   top: 0;
   background-color: rgb(255, 115, 65);
   border: 2px solid black;
   border-radius: 10px;
   min-width: 140px;
   max-height: 264px;
-  overflow-y: auto; /* Enables vertical scrolling for the long list of years */
-  z-index: 300; /* Sits above the dropdown */
+  overflow-y: auto;
+  z-index: 300;
+  /* Animation properties */
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 /* Custom scrollbar styling for the subdropdown — width of the scrollbar track */
@@ -231,7 +242,8 @@ body {
 
 /* Makes the subdropdown visible when the open class is toggled on by Menu.js */
 .subdropdown.open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Individual year links inside the subdropdown */
@@ -292,6 +304,7 @@ body {
 .bluelink {
   color: black;
   font-size: 40px;
+  display: block;
   text-align: center;
 }
 
@@ -341,6 +354,10 @@ body {
   font-size: 25px;
   color: rgb(255, 255, 255);
 }
+.copyright {
+  color:white;
+}
+
 
 /* Active state used globally: darkens the element, disables pointer interaction,
    and sets a solid black border — used to indicate the current page in nav links */
