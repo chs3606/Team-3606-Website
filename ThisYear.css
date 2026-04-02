@@ -1,7 +1,7 @@
-/* Imports the "Outfit" font from Google Fonts */
+/* Imports the "Montserrat" font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Sets "Outfit" as the default font for every element on the page */
+/* Sets "Montserrat" as the default font for every element on the page */
 * {
   font-family: "Montserrat";
 }
