@@ -5,19 +5,17 @@
 * {
   font-family: "Montserrat";
 }
-/* The above code is importing a font and setting it as default */
-/* If you want to find a specific element in css, look in HTML for its class */
 
-/* Removes default browser spacing around the page and sets the background to near-white */
+/* Removes default browser spacing around the page */
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);
 }
 
-/* .topbar is the navigation bar pinned to the top of the screen at all times */
-/* position: fixed keeps it visible even when scrolling */
-/* z-index: 100 keeps it above most other content */
+/* .topbar is the navigation bar pinned to the top of the screen */
+/* Note: on the This Year page the topbar background is orange, matching Sponsors.css */
+/* position: fixed keeps it visible while scrolling — z-index: 100 keeps it above most content */
 .topbar {
   position: fixed;
   top: 0;
@@ -33,7 +31,7 @@ body {
   z-index: 100;
 }
 
-/* .logo is the container for the team logo image on the left side of the topbar */
+/* .logo holds the team logo image on the left side of the topbar */
 .logo {
   display: flex;
   margin-left: 15%;
@@ -41,15 +39,14 @@ body {
 }
 
 /* .screenshot is the team logo image inside .logo */
-/* height: 120px makes it slightly taller than the topbar so it overlaps slightly */
 .screenshot {
   height: 120px;
   display: block;
   background-color: black;
 }
 
-/* .midtext is the container for the team name in the center of the topbar */
-/* margin auto on both sides pushes it to the center between .logo and .menudiv */
+/* .midtext is the container for the team name centered in the topbar */
+/* margin auto on both sides pushes it to the center */
 .midtext {
   position: absolute;
   margin-right: auto;
@@ -61,16 +58,17 @@ body {
   font-size: 40px;
   font-weight: 500;
   color: rgb(255, 255, 255);
+
 }
 
 /* .menudiv is the wrapper for the hamburger button and .dropdown on the right side of the topbar */
-/* position: relative lets .dropdown use it as an anchor for absolute positioning */
+/* position: relative lets .dropdown anchor itself relative to .menudiv */
 .menudiv {
   position: relative;
   margin-right: 40px;
 }
 
-/* .menu is the hamburger button itself */
+/* .menu is the hamburger button */
 /* display: flex + flex-direction: column stacks the three spans vertically */
 .menu {
   display: flex;
@@ -79,13 +77,13 @@ body {
   width: 36px;
   height: 26px;
   background: none;
-  border: 2px;
-  border-color: rgb(255, 255, 255);
+  border: none;
   cursor: pointer;
   padding: 0;
 }
 
 /* Each span inside .menu is one of the three horizontal bars of the hamburger icon */
+/* Note: bars are black here to contrast against the orange topbar */
 /* transition animates the bars smoothly when the menu opens */
 .menu span {
   display: block;
@@ -96,7 +94,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* When .menu has the "open" class added by Menu.js, the first bar rotates down to form an X */
+/* When Menu.js adds "open" to .menu, the first bar rotates down to start forming an X */
 .menu.open span:nth-child(1) {
   transform: translateY(11px) rotate(45deg);
 }
@@ -106,14 +104,13 @@ body {
   opacity: 0;
 }
 
-/* The third bar rotates up to complete the X shape when the menu is open */
+/* The third bar rotates up to complete the X shape */
 .menu.open span:nth-child(3) {
   transform: translateY(-11px) rotate(-45deg);
 }
 
-/* .dropdown is the navigation menu that drops down from .menudiv when the hamburger is clicked */
-/* display: none hides it by default — Menu.js adds the "open" class to show it */
-/* position: absolute places it below the hamburger button */
+/* .dropdown is the nav menu that appears below .menudiv when the hamburger is clicked */
+/* display: none hides it by default — Menu.js adds "open" to show it */
 /* z-index: 200 keeps it above .topbar content */
 .dropdown {
   position: absolute;
@@ -133,22 +130,22 @@ body {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-/* Rounds the bottom corners of the last .droplink so it matches the rounded .dropdown border */
-/* Removes the bottom border on the last item so it doesn't double up with the container border */
+/* Rounds the bottom corners of the last .droplink to match the rounded .dropdown border */
+/* Removes the bottom border on the last item so it doesn't double up with the container */
 .droplink:last-child {
   border-radius: 0 0 8px 8px;
   border-bottom: none;
 }
 
 /* When Menu.js adds "open" to .dropdown, it switches from display:none to display:flex */
-/* display: flex is used instead of block so flex-direction: column works on the links */
 .dropdown.open {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
+
 /* .droplink is the style for each navigation link row inside .dropdown */
-/* position: relative is needed so .subdropdown can be positioned relative to .pastyearsmenu */
+/* position: relative is needed so .subdropdown can position itself relative to .pastyearsmenu */
 .droplink {
   color: black;
   text-decoration: none;
@@ -161,21 +158,21 @@ body {
   position: relative;
 }
 
-/* Lightens the background of a .droplink when the user hovers over it */
+/* Lightens the background of a .droplink when hovered */
 .droplink:hover {
   background-color: rgb(255, 159, 124);
 }
 
 /* .droplink.active highlights the current page's link in a darker color */
-/* pointer-events: none prevents clicking it since you're already on that page */
+/* pointer-events: none prevents clicking since you're already on that page */
 .droplink.active {
   background-color: rgb(200, 60, 10);
   cursor: default;
   pointer-events: none;
 }
 
-/* .pastyearsmenu is the "Past Years" row in .dropdown that contains .subdropdown */
-/* display: flex + justify-content: space-between pushes the text and .arrow to opposite ends */
+/* .pastyearsmenu is the "Past Years" row that contains .subdropdown */
+/* justify-content: space-between pushes the label text and .arrow to opposite ends */
 /* user-select: none prevents the text from being accidentally highlighted on click */
 .pastyearsmenu {
   display: flex;
@@ -186,17 +183,17 @@ body {
 }
 
 /* .arrow is the ▸ triangle icon inside .pastyearsmenu */
-/* transition animates the rotation smoothly when the submenu opens */
+/* transition animates the rotation when the submenu opens */
 .arrow {
   transition: transform 0.2s ease;
 }
 
-/* Rotates .arrow 90 degrees when .pastyearsmenu has the "open" class added by Menu.js */
+/* Rotates .arrow 90 degrees when Menu.js adds "open" to .pastyearsmenu */
 .pastyearsmenu.open .arrow {
   transform: rotate(90deg);
 }
 
-/* .subdropdown is the nested year list that appears to the left of .pastyearsmenu when opened */
+/* .subdropdown is the nested year list that appears to the left of .pastyearsmenu */
 /* display: none hides it by default */
 /* right: 100% positions it directly to the left of .pastyearsmenu */
 /* max-height + overflow-y: auto makes it scrollable when there are many years */
@@ -220,9 +217,9 @@ body {
   transition: opacity 0.25s ease;
 }
 
-/* Custom scrollbar styling for .subdropdown in Chrome/Safari/Edge (webkit browsers) */
+/* Custom scrollbar styling for .subdropdown in webkit browsers (Chrome/Safari/Edge) */
 
-/* Sets the width of the scrollbar track */
+/* Sets the width of the scrollbar */
 .subdropdown::-webkit-scrollbar {
   width: 6px;
 }
@@ -240,7 +237,7 @@ body {
   border-radius: 10px;
 }
 
-/* Darkens the thumb when hovered */
+/* Darkens the scrollbar thumb when hovered */
 .subdropdown::-webkit-scrollbar-thumb:hover {
   background: black;
 }
@@ -267,65 +264,69 @@ body {
 }
 
 /* .content is the main body area of the page below the .topbar */
-/* margin-top pushes it down so it starts below the fixed .topbar */
-/* margin-left/right add side padding so content doesn't touch the edges */
+/* margin-top pushes it down so it clears the fixed .topbar */
+/* margin-left/right adds side spacing so content doesn't touch the edges */
 .content {
   margin-top: 175px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-/* .intro is the large centered heading text used for the team name on the page */
-.intro {
-  text-align: center;
-  font-size: 50px;
-}
-
-/* .mainpic is the main team photo on the homepage */
-/* width: 100% makes it fill the full width of .content */
-/* position: relative + z-index: 1 lets .seasonmain layer on top of it */
-.mainpic {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  border-radius: 25px;
-}
-
-/* .seasonmain is the season year label that overlays on top of .mainpic */
-/* position: absolute + left/right: 50% centers it horizontally over the image */
-/* z-index: 2 places it above .mainpic */
-/* white-space: nowrap prevents the text from wrapping to a second line */
-.seasonmain {
-  z-index: 2;
-  left: 50%;
-  right: 50%;
-  text-align: center;
-  position: absolute;
+/* .pagetitle is the large "This Year" heading at the top of .content */
+/* justify-self: center centers it horizontally within the content area */
+.pagetitle {
   justify-self: center;
-  font-weight: 700;  
-  margin: 0;
-  padding-top: 100px;
-  white-space: nowrap;
-  font-size: 50px;
-  color: rgb(255, 68, 0);
-  border: black;
-   text-shadow:
-       -2px -2px 0 #000,
-        2px -2px 0 #000,
-       -2px 2px 0 #000,
-        2px 2px 0 #000;
+  font-size: 70px;
 }
 
-/* .description is the team info paragraph below .mainpic */
-/* margin-bottom adds spacing between it and the .footer */
+/* .description is the overview paragraph about the regional competition */
 .description {
-  font-size: 30px;
-  margin-bottom: 40px;
+  font-size: 24px;
   text-align: center;
 }
 
-/* .footer is the dark bar at the bottom of the page */
-/* height: 200px sets a fixed height for the footer */
+/* .rebuilt is the paragraph describing this year's FRC game theme */
+.rebuilt {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* .magregional is the game logo image linking to the FIRST season page */
+/* display: block + margin auto centers it horizontally on the page */
+.magregional {
+  height: 200px;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* .botdes is the robot description and season recap paragraphs below the game logo */
+/* margin-bottom adds spacing between the text and the robot photo below it */
+.botdes {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* .currentbot is the container for the current season's robot photo */
+/* justify-self: center centers it horizontally within .content */
+.currentbot {
+  font-size: 100px;
+  justify-self: center;
+}
+
+/* .curbotpic is the robot photo image inside .currentbot */
+/* max-height caps how tall the image can get so it doesn't dominate the page */
+/* border-radius softly rounds the corners of the photo */
+.curbotpic {
+  justify-self: center;
+  border-radius: 8px;
+  max-height: 500px;
+}
+
+/* .footer is the colored bar at the bottom of the page */
+/* Note: on the This Year page the footer is orange to match the topbar */
 .footer {
   display: block;
   align-content: center;
@@ -335,7 +336,7 @@ body {
   height: 200px;
 }
 
-/* .topbit is the row of external logo links in the upper half of .footer */
+/* .topbit is the row of external organization logo links in the upper half of .footer */
 /* display: flex + justify-content: center keeps the logos centered horizontally */
 .topbit {
   flex: 1;
@@ -362,6 +363,7 @@ body {
 }
 
 /* .link is each text link ("Contact Us", "Support Us") inside .bottombit */
+/* Note: color is black here to contrast against the orange footer */
 .link {
   margin-left: 20px;
   margin-right: 20px;
@@ -372,12 +374,12 @@ body {
   color:white;
 }
 
-/* .active highlights the current page link in the .dropdown menu */
+
+/* .active highlights the current page's link in the .dropdown */
 /* pointer-events: none disables clicking since you're already on that page */
-/* This applies to any element with the "active" class, not just .droplink */
 .active {
   background-color: rgb(200, 60, 10);
   cursor: default;
   pointer-events: none;
-  border-color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0)
 }

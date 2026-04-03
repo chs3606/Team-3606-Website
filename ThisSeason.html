@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sponsors</title>
-  <link rel="stylesheet" href="Sponsors.css">
+  <title>This Year</title>
+  <link rel="stylesheet" href="ThisSeason.css">
   <link rel="icon" type="image/png" href="Gallery/Other/Favicon.png">
 </head>
 <body>
@@ -47,10 +47,10 @@
       <div class="dropdown" id="dropdown">
 
         <!-- .droplink is the style for each nav link in the dropdown -->
-        <!-- class="active" highlights Sponsors since this is the current page -->
+        <!-- class="active" highlights This Year since this is the current page -->
         <a href="Home.html" class="droplink">Home</a>
-        <a href="Sponsors.html" class="droplink active">Sponsors</a>
-        <a href="ThisSeason.html" class="droplink">This Season</a>
+        <a href="Sponsors.html" class="droplink">Sponsors</a>
+        <a href="ThisSeason.html" class="droplink active">This Season</a>
         <a href="Gallery.html" class="droplink">Gallery</a>
 
         <!-- .pastyearsmenu is the "Past Years" row that opens .subdropdown -->
@@ -94,38 +94,66 @@
   <!-- End .topbar -->
 
 
-  <!-- .content is the main body section of the Sponsors page -->
+  <!-- .content is the main body section of the This Year page -->
   <div class="content">
 
-    <!-- .pagetitle is the large heading at the top of the page -->
-    <p class=pagetitle>
-      Team 3606 Sponsors
+    <!-- .pagetitle is the large "This Year" heading at the top of the page -->
+    <p class="pagetitle">
+      This Season
     </p>
 
-    <!-- .description is the short intro line below the page title -->
+    <!-- .description is the overview paragraph about the regional competition -->
+    <!-- Update this each year with the new regional name, location, dates, and team count -->
     <p class="description">
-      Team 3606 is sponsored by Catholic High School in Baton Rouge, Louisiana.
+      Team 3606 is competing in the Magnolia Regional in Laurel, Mississippi.
+      The Magnolia Regional is being held Wednesday, March 18 to Saturday, March 21, 2026.
+      There are 46 teams in the Magnolia Regional with a list of those teams found at FIRST's website.
+      This year, teams have six weeks to design, build, and program their robot to compete in this year's competition, with the top placers earning a spot at the FIRST World Championship.
     </p>
 
-    <!-- .catholic is the longer paragraph describing Catholic High School as a sponsor -->
-    <p class="catholic">
-      Bear Metal Team 3606 is proud to call Catholic High School home. 
-      Founded in 1894 in Baton Rouge, Louisiana, CHS has built over 130 years of academic and athletic excellence. 
-      The only school in the nation to be recognized six times as a National Blue Ribbon School of Excellence by the U.S. Department of Education, Catholic High is more than a school — it's a legacy. 
-      With over 113 state championships across multiple sports and a community that pushes students to be their best, it's no surprise that a team like Bear Metal was born here. 
-      Thank you to Catholic High School for giving us the space, the support, and the spirit to compete. 
-      Learn more at catholichigh.org.
+    <!-- .rebuilt is the paragraph describing this year's FRC game theme (REBUILT™) -->
+    <!-- Update this each year with the new game's description -->
+    <p class="rebuilt">
+      In REBUILT™ presented by Haas, FIRST® Robotics Competition teams will use engineering skills and re-imagine the past.
+      Every artifact we uncover holds a story. 
+      Each tool, each innovation, each work of art connects us to the people and ideas that came before us. 
+      Using STEM skills and teamwork, today we can dig deeper into discoveries than ever before.
     </p>
 
-    <!-- .chsspondiv is the container for the Catholic High School sponsor logo -->
-    <div class="chsspondiv">
-        <!-- Clicking the logo opens the CHS website in a new tab -->
-        <a href="https://www.catholichigh.org/" target="_blank">
+    <!-- Clicking the .magregional image opens the FIRST game and season page in a new tab -->
+    <!-- Update src each year to point to the new season's game logo image -->
+    <a href="https://www.firstinspires.org/programs/frc/game-and-season" target="_blank">
        <img src=
-    "Gallery/Other/CHSLogo2.png" alt="CHS Logo"
-    class="chsspon"> </a>
-    <!-- .chsspon is the CHS logo image inside .chsspondiv -->
-    <!-- Add more sponsor logos here in the same format as new sponsors are added -->
+    "Gallery/Other/Rebuilt.png" alt="Rebuilt Picture"
+    class="magregional">
+    <!-- .magregional is the REBUILT game logo image linking to the FIRST season page -->
+    </a>
+
+    <!-- .botdes is the description paragraph about the team's robot design and season recap -->
+    <!-- Update this each year with the new robot description -->
+    <p class="botdes">
+      This year, Bear Metal Team 3606 is running a custom swerve drive base, giving us greater maneuverability and precision on the field compared to traditional drive systems. 
+      For our intake, we're using the kitbot — a reliable and proven solution that lets us focus our energy on the swerve drive base.
+    </p>
+
+    <div>
+      <!-- Second .botdes paragraph — the season recap describing what went wrong this year -->
+      <!-- Update or replace this each year with the new season's story -->
+      <p class="botdes">
+        This year, we had a rough year. We had multiple faulty swerve drive encoders and faulty Spark Maxes which took most of our time at competition to fix. Then our code was not finished and
+        and calibrated for our Nav-X, which again took most of our time to diagnose and fix. Since our team does not have any outside help, these problems were big since we did not have spare parts
+        and were required to borrow some from other teams such as Prometheus. We also had a major lack of planning. All of this combined made our robot nonfunctional for most of our qualifying matches except
+        for two. One of these matches our robot started sparking due to faulty wiring. The second, it worked for like two seconds, then the lack of good code became apparent. Our team will come back next year
+        having recovered from this, and will come back with an amazing robot in 2027.
+      </p>
+
+      <!-- .currentbot is the container for the current season's robot photo -->
+      <div class="currentbot">
+        <!-- .curbotpic is the robot photo image inside .currentbot -->
+        <!-- Update src each year to point to the new season's robot photo -->
+        <img class=curbotpic src="Gallery/2026/2026Bot1.jpg" alt="2026 Bot">
+      </div>
+
     </div>
 
   </div>
@@ -140,7 +168,6 @@
     <div class="topbit">
       <!-- .footerlink is the style for each logo image in .topbit -->
       <!-- Each link opens in a new tab via target="_blank" -->
-
       <a href="https://www.firstinspires.org/" target="_blank">
         <img src="Gallery/Other/FirstLogo.png" alt="FIRST" class="footerlink">
       </a>
