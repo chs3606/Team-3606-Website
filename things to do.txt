@@ -1,5 +1,4 @@
-Current news section
-calendar with meetings and competition, etc
+Fix header stuff in new sections
 
 remember to do the sitemap stuff when it goes live
 Change the share url stuff when it goes live:
