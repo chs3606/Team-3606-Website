@@ -1,11 +1,1 @@
-Fix header stuff in new sections
-
-remember to do the sitemap stuff when it goes live
-Change the share url stuff when it goes live:
-
-<!-- Open Graph tags — controls how the page looks when shared on Discord, social media, etc. -->
-<meta property="og:title" content="Bear Metal Team 3606">
-<meta property="og:description" content="FIRST Robotics Team 3606 based at Catholic High School in Baton Rouge, Louisiana.">
-<meta property="og:image" content="https://yoursite.com/Gallery/2026/2026Team2.jpeg">
-<meta property="og:url" content="https://yoursite.com/Home.html">
-<meta property="og:type" content="website">
+Mobile look good
