@@ -303,7 +303,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
