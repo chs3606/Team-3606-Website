@@ -1,0 +1,15 @@
+{
+    "env": "kyra-dev",
+    "kyra-dev": {
+        "port": 7512,
+        "url": "https://$PORT.pi1.unrealind.com"
+    },
+    "dev": {
+        "port": 7512,
+        "url": "http://localhost:$PORT"
+    },
+    "prod": {
+        "port": 7512,
+        "url": "https://3606bearmetal.com"
+    }
+}
