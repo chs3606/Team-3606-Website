@@ -1,1 +1,2 @@
-All Done
+Add a section to sign up for emails
+Add section to add pictures to gallery

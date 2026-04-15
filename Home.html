@@ -15,45 +15,35 @@
 </head>
 
 <body>
-  <!-- body contains everything visible on the page -->
 
   <!-- .topbar is the navigation bar fixed across the top of the page -->
   <nav class="topbar">
 
-    <!-- .logo holds the team profile picture in the top-left of the topbar -->
+    <!-- .logo holds the team logo in the top-left of the topbar -->
     <div class="logo">
       <a href="Home.html">
-        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot">
+        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot" id="screenshot">
       </a>
-      <!-- .screenshot is the team logo image displayed inside .logo -->
     </div>
 
-    <!-- .midtext holds the team name text centered in the topbar -->
+    <!-- .midtext holds the team name centered in the topbar -->
     <div class="midtext">
-      <p class="title">
-        <!-- .title is the "Bear Metal Team 3606" heading text in the topbar -->
-        Bear Metal Team 3606
-      </p>
+      <p class="title">Bear Metal Team 3606</p>
     </div>
 
     <!-- .menudiv wraps the hamburger button and dropdown menu together -->
     <div class="menudiv">
 
-      <!-- .menu is the hamburger button — clicking it opens/closes .dropdown -->
-      <!-- id="menu" is used by Menu.js to listen for clicks on this button -->
+      <!-- .menu is the hamburger button -->
       <button class="menu" id="menu">
-        <!-- Each span is one of the three lines that make up the hamburger icon -->
         <span></span>
         <span></span>
         <span></span>
       </button>
 
       <!-- .dropdown is the navigation menu that appears when the hamburger is clicked -->
-      <!-- id="dropdown" is used by Menu.js to toggle this menu open and closed -->
       <div class="dropdown" id="dropdown">
 
-        <!-- .droplink is the style for each navigation link in the dropdown -->
-        <!-- class="active" highlights the current page (Home) in the menu -->
         <a href="Home.html" class="droplink active">Home</a>
         <a href="Sponsors.html" class="droplink">Sponsors</a>
         <a href="ThisSeason.html" class="droplink">This Season</a>
@@ -61,16 +51,10 @@
         <a href="News.html" class="droplink">News</a>
         <a href="Calendar.html" class="droplink">Calendar</a>
 
-        <!-- .pastyearsmenu is the "Past Years" item that has a nested submenu inside .dropdown -->
-        <!-- id="pastyears-btn" is used by Menu.js to handle opening the subdropdown -->
-        <div class="droplink pastyearsmenu" id="pastyears-btn">
-          Past Years <span class="arrow">&#129030</span>
-          <!-- .arrow is the small triangle icon indicating this item expands into a submenu -->
-
-          <!-- .subdropdown is the nested submenu that appears when hovering/clicking Past Years -->
-          <!-- id="subdropdown" is used by Menu.js to show and hide this submenu -->
+        <!-- .historymenu is the "History" item with a nested submenu -->
+        <div class="droplink historymenu" id="history-btn">
+          History <span class="arrow">&#129030</span>
           <div class="subdropdown" id="subdropdown">
-            <!-- .sublink is the style for each individual year link inside .subdropdown -->
             <a href="2026.html" class="sublink">2026</a>
             <a href="2025.html" class="sublink">2025</a>
             <a href="2024.html" class="sublink">2024</a>
@@ -88,10 +72,25 @@
             <a href="2012.html" class="sublink">2012</a>
             <a href="2011.html" class="sublink">2011</a>
           </div>
-          <!-- End .subdropdown -->
-
         </div>
-        <!-- End .pastyearsmenu -->
+
+        <!-- =====================
+             THEME TOGGLE ROW
+             Last item in the dropdown — rounded bottom corners from .theme-row in CSS
+             Clicking the switch toggles dark mode on <body> and saves the preference
+             ===================== -->
+        <div class="theme-row" id="theme-row">
+          <span class="theme-label">
+            <!-- Sun icon for light, moon for dark — swapped by JS -->
+            <span id="theme-icon"></span>
+            <span id="theme-text">Light Mode</span>
+          </span>
+          <label class="toggle-switch" title="Toggle dark mode">
+            <!-- The checkbox drives the CSS toggle via :checked -->
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-track"></span>
+          </label>
+        </div>
 
       </div>
       <!-- End .dropdown -->
@@ -102,75 +101,50 @@
   </nav>
   <!-- End .topbar -->
 
-  <!-- .content is the main body section of the homepage below the topbar -->
+  <!-- .content is the main body section of the homepage -->
   <div class="content">
     <div>
-      <!-- .intro is the large heading text style used for the team name on the page -->
       <p class="intro">Catholic High School's Team 3606</p>
     </div>
-    <P class="intro">Bear Metal</P>
+    <p class="intro">Bear Metal</p>
 
-    <!-- .piccontainer wraps the season label and main team photo together -->
+    <!-- .piccontainer wraps the season label and main team photo -->
     <div class="piccontainer">
-      <!-- .seasonmain is the season year label displayed above the main photo -->
-      <p class="seasonmain">
-        2026 Season
-      </p>
-      <!-- .mainpic is the main team photo displayed on the homepage -->
-      <!-- Update src each year to point to the new season's team photo -->
+      <p class="seasonmain">2026 Season</p>
       <img src="Gallery/2026/2026Team2.jpg" style="border: 3px solid black;" alt="2026 Team Pic" class="mainpic">
     </div>
 
-    <!-- .description is the paragraph of text describing the team below the photo -->
-    <P class="description">
+    <p class="description">
       Team 3606 Bear Metal is a FIRST robotics team based in Baton Rouge Louisiana at Catholic High School. Team 3606
       has been competing in FIRST competitions since 2011. We help students obtain new knowledge in programming,
       electrical work, and mechanical work.
-    </P>
+    </p>
 
   </div>
   <!-- End .content -->
 
-  <!-- .footer is the bottom bar of the page containing external links and contact links -->
+  <!-- .footer is the bottom bar of the page -->
   <div class="footer">
 
-    <!-- .topbit holds the row of external organization logo links in the footer -->
     <div class="topbit">
-
-      <!-- Each anchor tag opens the linked site in a new tab (target="_blank") -->
-      <!-- .footerlink is the style applied to each logo image in the footer -->
-
-      <!-- Link to the FIRST Inspires official website -->
       <a href="https://www.firstinspires.org/" target="_blank">
         <img src="Gallery/Other/FirstLogo.png" alt="FIRST" class="footerlink">
       </a>
-
-      <!-- Link to the team's page on The Blue Alliance -->
       <a href="https://www.thebluealliance.com/team/3606" target="_blank">
         <img src="Gallery/Other/BlueAlianceLogo.png" alt="Blue Alliance" class="footerlink">
       </a>
-
-      <!-- Link to Catholic High School's website -->
       <a href="https://www.catholichigh.org/" target="_blank">
         <img src="Gallery/Other/CatholicLogo.jpg" alt="CHS" class="footerlink">
       </a>
-
-      <!-- Link to the team's robot code GitHub repository -->
       <a href="https://github.com/chs3606/FRC2026-FORKED" target="_blank">
         <img src="Gallery/Other/GithubLogo.png" alt="Code" class="footerlink">
       </a>
-
-      <!-- Link to the team's website source code GitHub repository -->
       <a href="https://github.com/WrigZZ/Team-3606-Website" target="_blank">
         <img src="Gallery/Other/GithubLogo.png" alt="Web Code" class="footerlink">
       </a>
-
     </div>
-    <!-- End .topbit -->
 
-    <!-- .bottombit holds the Contact Us and Support Us text links at the bottom of the footer -->
     <div class="bottombit">
-      <!-- .link is the style for the text links inside .bottombit -->
       <a target="_blank"
         href="https://docs.google.com/forms/d/e/1FAIpQLSf-ARXAgibs5XYvToSkP_Xz5c5w89AbsWZ_nEj2urVqudIYmw/viewform?usp=publish-editor"
         class="link">Contact Us</a>
@@ -178,18 +152,17 @@
         href="https://docs.google.com/forms/d/e/1FAIpQLSd3Ozljtnx2aHu-FZ0SQ16fMAEZm4VjGRfBngM0sldzolF4mw/viewform?usp=publish-editor"
         class="link">Support Us</a>
     </div>
-    <!-- End .bottombit -->
+
     <div class="copyright">
-      <p>
-        &copy; 2026 Bear Metal Team 3606
-      </p>
+      <p>&copy; 2026 Bear Metal Team 3606</p>
     </div>
+
   </div>
   <!-- End .footer -->
 
-  <!-- Menu.js handles the hamburger menu open/close and Past Years submenu logic -->
-  <!-- Script tags go at the end of the body so the HTML loads before the JS runs -->
+  <!-- Menu.js handles the hamburger menu and History submenu logic -->
   <script src="Menu.js"></script>
+
 
 </body>
 

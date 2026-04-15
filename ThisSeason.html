@@ -23,7 +23,7 @@
     <!-- .logo holds the team logo image in the top-left of the topbar -->
     <div class="logo">
       <a href="Home.html">
-        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot">
+        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot" id="screenshot">
       </a>
       <!-- .screenshot is the team logo image inside .logo -->
     </div>
@@ -60,10 +60,10 @@
         <a href="News.html" class="droplink">News</a>
         <a href="Calendar.html" class="droplink">Calendar</a>
 
-        <!-- .pastyearsmenu is the "Past Years" row that opens .subdropdown -->
-        <!-- id="pastyears-btn" is used by Menu.js -->
-        <div class="droplink pastyearsmenu" id="pastyears-btn">
-          Past Years <span class="arrow">&#129030</span>
+        <!-- .historymenu is the "History" row that opens .subdropdown -->
+        <!-- id="history-btn" is used by Menu.js -->
+        <div class="droplink historymenu" id="history-btn">
+          History <span class="arrow">&#129030</span>
           <!-- .arrow is the triangle icon that rotates when the submenu opens -->
 
           <!-- .subdropdown is the nested year list — id="subdropdown" is used by Menu.js -->
@@ -89,8 +89,24 @@
           <!-- End .subdropdown -->
 
         </div>
-        <!-- End .pastyearsmenu -->
-
+        <!-- End .historymenu -->
+        <!-- =====================
+             THEME TOGGLE ROW
+             Last item in the dropdown — rounded bottom corners from .theme-row in CSS
+             Clicking the switch toggles dark mode on <body> and saves the preference
+             ===================== -->
+        <div class="theme-row" id="theme-row">
+          <span class="theme-label">
+            <!-- Sun icon for light, moon for dark — swapped by JS -->
+            <span id="theme-icon"></span>
+            <span id="theme-text">Light Mode</span>
+          </span>
+          <label class="toggle-switch" title="Toggle dark mode">
+            <!-- The checkbox drives the CSS toggle via :checked -->
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-track"></span>
+          </label>
+        </div>
       </div>
       <!-- End .dropdown -->
 
@@ -122,7 +138,8 @@
     <!-- .rebuilt is the paragraph describing this year's FRC game theme (REBUILT™) -->
     <!-- Update this each year with the new game's description -->
     <p class="rebuilt">
-      In REBUILT&#x2122; presented by Haas, FIRST&#174; Robotics Competition teams will use engineering skills and re-imagine the
+      In REBUILT&#x2122; presented by Haas, FIRST&#174; Robotics Competition teams will use engineering skills and
+      re-imagine the
       past.
       Every artifact we uncover holds a story.
       Each tool, each innovation, each work of art connects us to the people and ideas that came before us.
@@ -149,15 +166,18 @@
       <!-- Second .botdes paragraph — the season recap describing what went wrong this year -->
       <!-- Update or replace this each year with the new season's story -->
       <p class="botdes">
-         In 2026, we had a rough year. We had multiple faulty swerve drive encoders and faulty Spark Maxes which took a lot of time at competition to fix. Then our code was not finished and
-      or calibrated for our Nav-X, which also took a lot of time to diagnose and fix. Since our team does not have
-      any outside help, these problems were big since we did not have spare parts
-      and were required to borrow some from other teams such as Prometheus. We also had a major lack of planning. All of
-      this combined made our robot nonfunctional for most of our qualifying matches except
-      for two. One of these matches our robot started sparking due to faulty wiring. The second, it worked for like two
-      seconds, then the lack of good code became apparent. Our team will come back next year
-      having recovered from this, and will come back with an amazing robot in 2027.
-    </p>
+        In 2026, we had a rough year. We had multiple faulty swerve drive encoders and faulty Spark Maxes which took a
+        lot of time at competition to fix. Then our code was not finished and
+        or calibrated for our Nav-X, which also took a lot of time to diagnose and fix. Since our team does not have
+        any outside help, these problems were big since we did not have spare parts
+        and were required to borrow some from other teams such as Prometheus. We also had a major lack of planning. All
+        of
+        this combined made our robot nonfunctional for most of our qualifying matches except
+        for two. One of these matches our robot started sparking due to faulty wiring. The second, it worked for like
+        two
+        seconds, then the lack of good code became apparent. Our team will come back next year
+        having recovered from this, and will come back with an amazing robot in 2027.
+      </p>
       </p>
 
       <!-- .currentbot is the container for the current season's robot photo -->
@@ -167,6 +187,84 @@
         <img class=curbotpic src="Gallery/2026/2026Bot1.jpg" alt="2026 Bot">
       </div>
 
+    </div>
+    <p class=pagetitle>
+      2026 Members
+    </p>
+
+
+    <div class="roster-wrapper">
+
+      <div class="column">
+        <h2>Mentors</h2>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Mr. Caffarel</div>
+            <div class="role">Moderator</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Coach White</div>
+            <div class="role">Moderator</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Mr. LeBlanc</div>
+            <div class="role">Moderator</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <h2>Members</h2>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Owen S.</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Spencer C.</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Kevin A.</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Jimmy</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Placeholder</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="person-info">
+            <div class="name">Placeholder</div>
+            <div class="role">Member</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="photo-section">
+      <h2>Team Photo</h2>
+      <div class="team-photo">
+        <img alt="teampic" src="Gallery/2026/2026Team2.jpg">
+      </div>
     </div>
 
   </div>
@@ -218,7 +316,7 @@
   </div>
   <!-- End .footer -->
 
-  <!-- Menu.js handles the hamburger menu and Past Years submenu logic -->
+  <!-- Menu.js handles the hamburger menu and History submenu logic -->
   <!-- Script tag goes at the end of the body so the HTML loads before the JS runs -->
   <script src="Menu.js"></script>
 

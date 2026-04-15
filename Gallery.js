@@ -7,7 +7,7 @@ const title = document.getElementById('slide-title');
 // "slide-title" is the element that displays the caption/title of the current slide
 
 const counter = document.getElementById('slide-counter');
-// "slide-counter" is the element that displays "1 / 14" style progress text
+// "slide-counter" is the element that displays "1 / ..." style progress text
 
 // Allows using the left and right arrow keys to navigate the slideshow
 document.addEventListener('keydown', (e) => {

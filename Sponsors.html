@@ -23,7 +23,7 @@
     <!-- .logo holds the team logo image in the top-left of the topbar -->
     <div class="logo">
       <a href="Home.html">
-        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot">
+        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot" id="screenshot">
       </a>
       <!-- .screenshot is the team logo image inside .logo -->
     </div>
@@ -60,10 +60,10 @@
         <a href="News.html" class="droplink">News</a>
         <a href="Calendar.html" class="droplink">Calendar</a>
 
-        <!-- .pastyearsmenu is the "Past Years" row that opens .subdropdown -->
-        <!-- id="pastyears-btn" is used by Menu.js -->
-        <div class="droplink pastyearsmenu" id="pastyears-btn">
-          Past Years <span class="arrow">&#129030</span>
+        <!-- .historymenu is the "History" row that opens .subdropdown -->
+        <!-- id="history-btn" is used by Menu.js -->
+        <div class="droplink historymenu" id="history-btn">
+          History <span class="arrow">&#129030</span>
           <!-- .arrow is the triangle icon that rotates when the submenu opens -->
 
           <!-- .subdropdown is the nested year list — id="subdropdown" is used by Menu.js -->
@@ -89,8 +89,24 @@
           <!-- End .subdropdown -->
 
         </div>
-        <!-- End .pastyearsmenu -->
-
+        <!-- End .historymenu -->
+        <!-- =====================
+             THEME TOGGLE ROW
+             Last item in the dropdown — rounded bottom corners from .theme-row in CSS
+             Clicking the switch toggles dark mode on <body> and saves the preference
+             ===================== -->
+        <div class="theme-row" id="theme-row">
+          <span class="theme-label">
+            <!-- Sun icon for light, moon for dark — swapped by JS -->
+            <span id="theme-icon"></span>
+            <span id="theme-text">Light Mode</span>
+          </span>
+          <label class="toggle-switch" title="Toggle dark mode">
+            <!-- The checkbox drives the CSS toggle via :checked -->
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-track"></span>
+          </label>
+        </div>
       </div>
       <!-- End .dropdown -->
 
@@ -185,7 +201,7 @@
   </div>
   <!-- End .footer -->
 
-  <!-- Menu.js handles the hamburger menu and Past Years submenu logic -->
+  <!-- Menu.js handles the hamburger menu and History submenu logic -->
   <!-- Script tag goes at the end of the body so the HTML loads before the JS runs -->
   <script src="Menu.js"></script>
 

@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2025</title>
-  <link rel="stylesheet" href="Years.css">
+  <link rel="stylesheet" href="History.css">
   <link rel="icon" type="image/png" href="Gallery/Other/Favicon.png">
   <meta property="og:title" content="2025 Season - Bear Metal Team 3606">
   <meta property="og:description" content="Bear Metal Team 3606's 2026 FIRST Robotics Competition season results.">
@@ -21,7 +21,7 @@
     <!-- Logo section: displays the team's GitHub avatar -->
     <div class="logo">
       <a href="Home.html">
-        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot">
+        <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot" id="screenshot">
       </a>
     </div>
 
@@ -52,9 +52,9 @@
         <a href="News.html" class="droplink">News</a>
         <a href="Calendar.html" class="droplink">Calendar</a>
 
-        <!-- "Past Years" item with a nested subdropdown for year links -->
-        <div class="droplink pastyearsmenu" id="pastyears-btn">
-          Past Years <span class="arrow">&#129030</span>
+        <!-- "History" item with a nested subdropdown for year links -->
+        <div class="droplink historymenu" id="history-btn">
+          History <span class="arrow">&#129030</span>
 
           <!-- Subdropdown listing all available past year pages -->
           <div class="subdropdown" id="subdropdown">
@@ -75,6 +75,23 @@
             <a href="2012.html" class="sublink">2012</a>
             <a href="2011.html" class="sublink">2011</a>
           </div>
+        </div>
+        <!-- =====================
+             THEME TOGGLE ROW
+             Last item in the dropdown — rounded bottom corners from .theme-row in CSS
+             Clicking the switch toggles dark mode on <body> and saves the preference
+             ===================== -->
+        <div class="theme-row" id="theme-row">
+          <span class="theme-label">
+            <!-- Sun icon for light, moon for dark — swapped by JS -->
+            <span id="theme-icon"></span>
+            <span id="theme-text">Light Mode</span>
+          </span>
+          <label class="toggle-switch" title="Toggle dark mode">
+            <!-- The checkbox drives the CSS toggle via :checked -->
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-track"></span>
+          </label>
         </div>
       </div>
     </div>

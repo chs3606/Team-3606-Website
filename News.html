@@ -19,7 +19,7 @@
   <!-- Note: News and Calendar have been added to the dropdown -->
   <nav class="topbar">
     <div class="logo">
-      <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot">
+      <img src="Gallery/Other/3606Logo.png" alt="Logo" class="screenshot" id="screenshot">
     </div>
     <div class="midtext">
       <p class="title">Bear Metal Team 3606</p>
@@ -38,8 +38,8 @@
         <!-- class="active" is on News since this is the current page -->
         <a href="News.html" class="droplink active">News</a>
         <a href="Calendar.html" class="droplink">Calendar</a>
-        <div class="droplink pastyearsmenu" id="pastyears-btn">
-          Past Years <span class="arrow">&#129030</span>
+        <div class="droplink historymenu" id="history-btn">
+          History <span class="arrow">&#129030</span>
           <div class="subdropdown" id="subdropdown">
             <a href="2026.html" class="sublink">2026</a>
             <a href="2025.html" class="sublink">2025</a>
@@ -58,6 +58,23 @@
             <a href="2012.html" class="sublink">2012</a>
             <a href="2011.html" class="sublink">2011</a>
           </div>
+        </div>
+        <!-- =====================
+             THEME TOGGLE ROW
+             Last item in the dropdown — rounded bottom corners from .theme-row in CSS
+             Clicking the switch toggles dark mode on <body> and saves the preference
+             ===================== -->
+        <div class="theme-row" id="theme-row">
+          <span class="theme-label">
+            <!-- Sun icon for light, moon for dark — swapped by JS -->
+            <span id="theme-icon"></span>
+            <span id="theme-text">Light Mode</span>
+          </span>
+          <label class="toggle-switch" title="Toggle dark mode">
+            <!-- The checkbox drives the CSS toggle via :checked -->
+            <input type="checkbox" id="theme-toggle">
+            <span class="toggle-track"></span>
+          </label>
         </div>
       </div>
     </div>
